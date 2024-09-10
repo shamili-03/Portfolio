@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamili's Internships</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        body {
+            background-color: rgb(12, 1, 31);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 97px;
+            background-color: rgb(39, 17, 76);
+        }
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            cursor: pointer;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: rgb(169, 169, 241);
+            font-size: 1.04rem;
+        }
+        .internshipsSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 40px 0;
+        }
+        .internshipsSection h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .internship {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .internship h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .internship p {
+            font-size: 1rem;
+        }
+        .internship .github-link {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 1rem;
+            color: rgb(97, 5, 179);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .internship .github-link:hover {
+            color: rgb(144, 57, 224);
+        }
+        .go-home-btn {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: rgb(143, 42, 212);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .go-home-btn:hover {
+            background: rgb(120, 32, 192);
+        }
+        footer {
+            background-color: rgb(55, 2, 94);
+            color: white;
+            padding: 20px 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .footer > div,
+        .footer ul {
+            width: 23%;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-rights {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid white;
+        }
+        @media (max-width: 768px) {
+            .internshipsSection h2 {
+                font-size: 1.5rem;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer > div {
+                width: 223px;
+            }
+            .footer ul {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Shamili's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="internships.html">Internships</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="internshipsSection">
+            <h2>My Internships</h2>
+            <div class="internship">
+                <h3>GOOGLE ANDROID DEVELOPER VIRTUAL INTERNSHIP</h3>
+                <p>APR 2024 – JUN 2024</p>
+                <p>I completed the Google Android Developer Virtual Internship, gaining hands-onexperience in developing Android applications using modern tools and frameworks. This 
+                    internship provided me with practical skills in app development and performance 
+                    optimization. It enhanced my understanding of best practices in Android development 
+                    and project management.</p>
+                
+            </div>
+            <div class="internship">
+                <h3>SALESFORCE DEVELOPER VIRTUAL INTERNSHIP</h3>
+                <p>NOV 2023 – JAN 2024</p>
+                <p>I learned to develop custom applications and solutions using the Salesforce platform. I 
+                    also gained hands-on experience in creating and customizing objects, workflows, and 
+                    user interfaces to meet specific business needs.</p>
+                
+            </div>
+            
+            </div>
+            <a href="index.html" class="go-home-btn">Go Back Home</a>
+        </section>
+    </main>
+    <footer>
+        
+            
+        <div class="footer-rights">www.shamilisportfolio.com | All rights reserved</div>
+    </footer>
+</body>
+</html>

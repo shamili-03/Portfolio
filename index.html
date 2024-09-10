@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamili Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(12, 1, 31);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 97px;
+            background-color: rgb(39, 17, 76);
+        }
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            cursor: pointer;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: rgb(169, 169, 241);
+            font-size: 1.04rem;
+        }
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+        .left {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            padding: 23px 0;
+            gap: 20px;
+            align-items: center;
+            margin: 130px 0;
+        }
+        .firstSection > div {
+            width: 35%;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .leftSection {
+            font-size: 1.5rem;
+            line-height: 2;
+            text-align: left;
+            margin: 50px 0;
+            word-break: keep-all;
+        }
+        .leftSection .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 10px; /* Adjust the spacing between buttons as needed */
+        }
+        
+        .leftSection .btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, rgb(143, 42, 212), rgb(70, 46, 134));
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            text-decoration: none; /* Ensure the text is not underlined */
+        }
+        
+        .leftSection .btn:hover {
+            background: linear-gradient(135deg, rgb(120, 32, 192), rgb(60, 34, 108));
+            transform: scale(1.05);
+        }
+        
+        .leftSection .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(144, 57, 224, 0.5);
+        }
+        
+        .rightSection img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .purple {
+            color: rgb(144, 57, 224);
+            font-weight: 700;
+        }
+        .text-gray {
+            color: gray; 
+        }
+        #element {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 1.5;
+            white-space: nowrap;
+            color: rgb(148, 50, 239);
+        }
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 40px 0;
+            height: auto;
+            text-align: center;
+        }
+        .secondSection h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .secondSection .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: white;
+            width: 100%;
+            height: 2px;
+            margin: 56px 0;
+        }
+        .secondSection .box .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            position: absolute;
+        }
+        .secondSection .box .vertical:nth-child(1) { left: 20%; }
+        .secondSection .box .vertical:nth-child(2) { left: 40%; }
+        .secondSection .box .vertical:nth-child(3) { left: 60%; }
+        .secondSection .box .vertical:nth-child(4) { left: 80%; }
+        .secondSection .box .vertical:nth-child(5) { right: 20%; }
+        .projectsSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 40px 0;
+        }
+        .projectsSection h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .profile-image {
+            width: 100%;
+            border-radius: 50%; /* Makes the image circular */
+            border: 5px solid rgba(255, 255, 255, 0.3); /* Adds a semi-transparent white border */
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds a smooth transition on hover */
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05); /* Slightly increases the size on hover */
+            box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.5); /* Darker and bigger shadow on hover */
+        }
+        
+        .projectsSection .project {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .projectsSection .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .projectsSection .project p {
+            font-size: 1rem;
+        }
+        footer {
+            background-color: rgb(55, 2, 94);
+            color: white;
+            padding: 20px 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .footer > div,
+        .footer ul {
+            width: 23%;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-rights {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid white;
+        }
+        @media (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .firstSection > div {
+                width: 80%;
+            }
+            .secondSection h1 {
+                font-size: 1.5rem;
+            }
+            .projectsSection h2 {
+                font-size: 1.5rem;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer > div{
+                width:223px;
+            }
+            .footer ul {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Shamili's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="internships.html">Internships</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, my name is <span class="purple">Shamili</span>  
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+            
+                <div class="buttons">
+                    <a href="resume.pdf" class="btn" download>Download Resume</a>
+                    <a href="https://leetcode.com/u/shamili_palapati/" class="btn" target="_blank">Visit Leetcode</a>
+                </div>
+            </div>
+            
+            <div class="rightSection">
+                <img src="images.jpeg" alt="Shamili's Image" class="profile-image">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Shamili's Developer Portfolio</h3>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="footer-third">
+                <h4>Connect with me:</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/shamilipalapati03012005/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/shamili-03/shamili-03" target="_blank">GitHub</a></li>
+                    
+                </ul>
+            </div>
+            <div class="footer-fourth">
+                <h4>Contact:</h4>
+                <ul>
+                    <li><a href="contact.html">Email</a></li>
+                    <li><a href="contact.html">Phone</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">www.shamilisportfolio.com | All rights reserved</div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Software Development Engineer.', 'Web Developer.', 'Data Structures Enthusiast.', 'Java Developer.'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+</html>

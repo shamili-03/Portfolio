@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shamili's Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        body {
+            background-color: rgb(12, 1, 31);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 97px;
+            background-color: rgb(39, 17, 76);
+        }
+        nav ul {
+            display: flex;
+        }
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+            cursor: pointer;
+        }
+        .go-home-btn:hover {
+            background: rgb(120, 32, 192);
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: rgb(169, 169, 241);
+            font-size: 1.04rem;
+        }
+        .projectsSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 40px 0;
+        }
+        .projectsSection h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .project {
+            background: white;
+            color: black;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .project p {
+            font-size: 1rem;
+        }
+        .project .github-link {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 1rem;
+            color: rgb(97, 5, 179);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .project .github-link:hover {
+            color: rgb(144, 57, 224);
+        }
+        footer {
+            background-color: rgb(55, 2, 94);
+            color: white;
+            padding: 20px 0;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .footer > div,
+        .footer ul {
+            width: 23%;
+        }
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .footer ul li {
+            margin: 10px 0;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer-rights {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid white;
+        }
+        @media (max-width: 768px) {
+            .projectsSection h2 {
+                font-size: 1.5rem;
+            }
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer > div {
+                width: 223px;
+            }
+            .footer ul {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Shamili's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="internships.html">Internships</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="projectsSection">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Youtube Comment Analyzer</h3>
+                <p>Developed a Comment Analyzer utilizing AI/ML to assess sentiment in 
+                    YouTube video comments, delivering percentage breakdowns of positive and 
+                    negative feedback.</p>
+                <p>python,youtbe_comment_scrapper_python,pandas</p>
+                <a href="https://github.com/shamili-03/YouTube-Comments-Sentiment-Analysis" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>E-Whiteboard</h3>
+                <p>Created an e-Whiteboard integrating motion tracking and digital writing 
+                    capabilities, enabling interactive and real-time content creation.</p>
+                <p>Technologies used:Google Media pipelines,canvas api</p>
+                <a href="https://github.com/shamili-03/e-Whiteboard" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>ATM Machine Design</h3>
+                <p>This ATM machine is designed to provide essential banking services with a focus on simplicity and security. It offers core functionalities such as depositing, withdrawing, and viewing mini statements, ensuring a smooth and straightforward experience for users.</p>
+                <a href="https://github.com/shamili-03/ATM-functions" class="github-link" target="_blank">View on GitHub</a>
+            </div>
+            <a href="index.html" class="go-home-btn">Go Back Home</a>
+        </section>
+    </main>
+    <footer>
+        
+        <div class="footer-rights">www.shamilisportfolio.com | All rights reserved</div>
+    </footer>
+</body>
+</html>
